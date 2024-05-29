@@ -1,8 +1,8 @@
 function verificaChuteValido(chute) {
-    const numero =  +chute; //converte para inteiro
+    const numero =  chute; //converte para inteiro
 
     if (chuteForInvalido(numero)) { 
-        elementoChute.innerHTML += '<div class="erro">Valor inválido</div>';
+        return elementoChute.innerHTML = '<div class="erro">Valor inválido</div>';
     }
 
     if(numeroForMaiorOuMenorQueOLimite(numero)){
@@ -17,7 +17,8 @@ function verificaChuteValido(chute) {
         <h3>O número secreto era ${numero}</h3>
         <button class="button" onclick="atualizarPagina()">Reiniciar game</button> 
         `
-    } else if (numero > numeroSecreto){
+    }
+    if (numero > numeroSecreto){
         elementoChute.innerHTML += `
         <div class="erro">O número secreto é menor <i class="fa-solid fa-arrow-down"> </i></div>
         `
@@ -30,7 +31,7 @@ function verificaChuteValido(chute) {
 }
 
 function chuteForInvalido(numero) { //valida se é number ou não
-    return Number.isNaN(numero);
+    return isNaN(parseFloat(numero));
 }
 
 function numeroForMaiorOuMenorQueOLimite(numero){
