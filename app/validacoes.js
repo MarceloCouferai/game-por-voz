@@ -2,7 +2,7 @@ function verificaChuteValido(chute) {
     const numero =  chute; //converte para inteiro
 
     if (chuteForInvalido(numero)) { 
-        return elementoChute.innerHTML = '<div class="erro">Valor inválido</div>';
+        return elementoChute.innerHTML = '<div class="erro">Somente números!</div>';
     }
 
     if(numeroForMaiorOuMenorQueOLimite(numero)){
