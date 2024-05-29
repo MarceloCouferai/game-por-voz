@@ -3,7 +3,8 @@
 :root {
     --font-family: "Red Hat Display", sans-serif;
     --bg-color: #F6ECF0;
-    --primary-color: #FF4646;
+    --primary-color: #CF0000;
+    --erro-color: #FFBBBB;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
     margin: 0;
 }
 
-h1 {
+h1, h2 {
     font-size: 6em;
 }
 
@@ -39,4 +40,25 @@ h3 {
     font-size: 5em;
     padding: 10px;
     margin: 20px;
+    border-radius: 10px;
+}
+
+.erro{
+    font-size: 2em;
+    background-color: var(--erro-color);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+button {
+    font-family: var(--font-family);
+    border: 1px solid var(--primary-color);
+    font-size: 1.5em;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 15px;
+    color: var(--primary-color);
+    font-weight: 500;
+
 }
